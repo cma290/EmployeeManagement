@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 angular.module('myApp', ['ngRoute','infinite-scroll','ngFileUpload','ui.bootstrap'])
+=======
+angular.module('myApp', ['ngRoute','ngFileUpload'])
+>>>>>>> refs/remotes/tedz28/master
 //routing config
 .config(['$routeProvider',
     function($routeProvider) {
@@ -196,19 +200,11 @@ angular.module('myApp', ['ngRoute','infinite-scroll','ngFileUpload','ui.bootstra
 })
 //employee list controller
 .controller('EmployeeListCtrl', function($scope,$location,employeeFactory) {
-    //$scope.data = [];
-    //let done = false;
     employeeFactory.getEmployees()
         .then(function(res) {
-            // $scope.data = res.data;
-            // $scope.employees = $scope.data.slice(0, 4);
-            // done = true;
            $scope.employees = res.data;
         });
 
-    $scope.getMore = function() {
-      //  if(done) $scope.employees = $scope.data.slice(0, $scope.employees.length + 2);
-    };
     $scope.viewDetail = function(employee) {
         $location.path("/" + employee._id);
     };
