@@ -30,7 +30,8 @@
                 </fieldset>
                 <fieldset class="form-group">
                     <label>Start Date:</label>
-                    <input class="form-control" type="text" ng-model="startDate"  placeholder="mm/dd/yyyy">
+					<uib-datepicker ng-model="dt" class="well well-sm" datepicker-options="options"></uib-datepicker>
+                    <input class="form-control ng-valid-date uib-datepicker-popup" type="text" ng-model="startDate"  placeholder="mm/dd/yyyy">
                 </fieldset>
                 <fieldset>
                     <label>Office Phone:</label>

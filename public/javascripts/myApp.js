@@ -1,4 +1,4 @@
-angular.module('myApp', ['ngRoute','infinite-scroll','ngFileUpload'])
+angular.module('myApp', ['ngRoute','infinite-scroll','ngFileUpload','ui.bootstrap'])
 //routing config
 .config(['$routeProvider',
     function($routeProvider) {
